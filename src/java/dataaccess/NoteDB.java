@@ -63,7 +63,7 @@ public class NoteDB {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
 
         try {
-            Note note = em.find(Note.class, em);
+            Note note = em.find(Note.class, noteId);
             return note;
         } finally {
             em.close();
